@@ -1,0 +1,37 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Hello World</title>
+    </head>
+    <body>
+        <button onclick="helloWold();">Clear!</button>
+        <button onclick="second();">Call!</button>
+    </body>
+    <script>
+        //DOM CRUD
+        //Create DOM
+        const h1Element=document.createElement("h1");
+        const textLine=document.createTextNode("Hello Myanamr and World");
+        h1Element.appendChild(textLine);
+        const bodyTag=document.getElementsByTagName("body");
+        const tagName=bodyTag[0];       
+        tagName.appendChild(h1Element);
+        document.querySelector('h1').style.color='red';
+        //Read DOM
+        let readContent=document.querySelector('h1');
+        console.log("The Text before is :",readContent.textContent);
+        //Update DOM
+        readContent.textContent="HELLO WORLD AND MYANMAR NICE!";
+        console.log("The Text after is :",readContent.textContent);
+        //Delete DOM
+        function helloWold(){
+            readContent.remove();
+        }; 
+        function second(){
+            tagName.appendChild(h1Element);
+            //readContent.textContent="Hello Myanamr and World";
+        }
+       
+
+    </script>
+</html>
